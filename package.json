@@ -1,0 +1,23 @@
+{
+  "name": "agile-azuredevops-project",
+  "version": "1.0.0",
+  "description": "This repository follows Agile methodologies using Azure DevOps for project tracking, CI/CD, and automation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atulkamble/Agile-AzureDevOps-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atulkamble/Agile-AzureDevOps-Project/issues"
+  },
+  "homepage": "https://github.com/atulkamble/Agile-AzureDevOps-Project#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
