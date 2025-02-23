@@ -1,0 +1,26 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: UseNode@1
+    inputs:
+      version: '14.x'
+
+  - script: |
+      npm install
+      npm run build
+    displayName: 'Build Application'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'drop'
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: 'Your-Service-Connection'
+      appName: 'your-webapp'
+      package: '$(Build.ArtifactStagingDirectory)/drop'
